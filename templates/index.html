@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Ameur</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+    <script
+      src="https://kit.fontawesome.com/9afceccd18.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="about-me">
+      <nav>
+        <div class="personal__logo">Ali Ameur</div>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href=""
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Languages</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href=""
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+              >Project</a
+            >
+          </li>
+          <li class="nav__link">
+            <a href="" class="nav__link--anchor nav__link--anchor-primary"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-1">
+        <div class="about-me__info row">
+          <div class="about-me__info--container">
+            <figure class="about-me__picture--mask">
+              <img
+                class="about-me__picture"
+                src="{{ url_for('static', filename='img/me.webp') }}"
+                alt="Picture of me"
+              />
+            </figure>
+            <h1 class="about-me__info--title">
+              Hey! I'm <span>Ali Ameur</span>&nbsp;<span class="wave">👋</span>
+            </h1>
+            <p class="about-me__info--para">
+              I'm a
+              <strong class="text--purple">fullstack software engineer</strong>
+              with a strong passion for building responsive and performant web
+              applications with great user experiences that positively impacts
+              the world.
+            </p>
+            <div class="about-me__links">
+              <a class="about-me__link" href="">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a class="about-me__link" href="">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a class="about-me__link" href="">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a class="about-me__link" href="">
+                <i class="fa-solid fa-file"></i>
+              </a>
+            </div>
+          </div>
+          <figure class="about-me__img--container">
+            <img
+              class="about-me__img"
+              src="{{ url_for('static', filename='img/undraw_websites.svg') }}"
+              alt=""
+            />
+          </figure>
+        </div>
+      </div>
+    </section>
+    <section id="languages">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            This is my <span class="text--purple">technology stack</span>
+          </h1>
+          <div class="language__list">
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://www.w3.org/html/logo/downloads/HTML5_Badge.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">HTML</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/512px-CSS3_logo.svg.png?20210705212817"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">CSS</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">React</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/512px-Bootstrap_logo.svg.png?20210507000024"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">Bootstrap</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">JavaScript</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://www.svgrepo.com/show/473611/flask.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">Flask</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://www.svgrepo.com/show/473669/jinja.svg"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">Jinja</span>
+            </div>
+            <div class="language">
+              <figure class="language__img--wrapper">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+                  alt=""
+                  class="language__img"
+                />
+              </figure>
+              <span class="language__name">Python</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="text--purple">projects</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="{{ url_for('static', filename='img/my_project.png') }}"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">Plant Imaging</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, Bootstrap, JavaScript, Flask, Jinja, SQL,
+                    RabbitMQ
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Architecto nihil, voluptatibus enim recusandae vitae
+                    doloribus cum delectus voluptate iste quam dolorem dolorum
+                    fuga eos sunt consequatur. Ab eaque aspernatur sequi!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="{{ url_for('static', filename='img/my_project.png') }}"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">Plant Imaging</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, Bootstrap, JavaScript, Flask, Jinja, SQL,
+                    RabbitMQ
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Architecto nihil, voluptatibus enim recusandae vitae
+                    doloribus cum delectus voluptate iste quam dolorem dolorum
+                    fuga eos sunt consequatur. Ab eaque aspernatur sequi!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="{{ url_for('static', filename='img/my_project.png') }}"
+                  alt=""
+                  class="project__img"
+                />
+                <div class="project__description">
+                  <h3 class="project__description--title">Plant Imaging</h3>
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, Bootstrap, JavaScript, Flask, Jinja, SQL,
+                    RabbitMQ
+                  </h4>
+                  <p class="project__description--para">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Architecto nihil, voluptatibus enim recusandae vitae
+                    doloribus cum delectus voluptate iste quam dolorem dolorum
+                    fuga eos sunt consequatur. Ab eaque aspernatur sequi!
+                  </p>
+                  <div class="project__description--links">
+                    <a href="" class="project__description--link">
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="" class="project__description--link">
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="row footer__row">
+        <a class="footer__anchor" href="#">
+          <figure class="footer__logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="footer__logo--img" alt="" />
+          </figure>
+          <span class="footer__logo--popper">
+            Top
+            <i class="fa-solid fa-arrow-up"></i>
+          </span>
+        </a>
+        <div class="footer__social--list">
+          <a
+            href=""
+            target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            >GitHub</a
+          >
+          <a
+            href=""
+            target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            >LinkedIn</a
+          >
+          <a
+            href=""
+            target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            >Email</a
+          >
+          <a
+            href="./assets/resume.pdf"
+            target="_blank"
+            class="footer__social--link link__hover-effect link__hover-effect--white"
+            >Resume</a
+          >
+        </div>
+        <div class="footer__copyright">Copyright © 2023 Ali Ameur</div>
+      </div>
+    </footer>
+  </body>
+</html>
