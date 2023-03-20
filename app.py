@@ -21,19 +21,19 @@ class ContactForm(FlaskForm):
 @app.route('/', methods=["GET", "POST"])
 def home():
     form = ContactForm(request.form)
-    if form.validate_on_submit():
-        with smtplib.SMTP("smtp.gmail.com", 587, timeout=120) as connection:
-            connection.starttls()
-            server_email = os.getenv('EMAIL')
-            server_pass = os.getenv('PASSWORD')
-            admin_email = os.getenv('ADMIN_EMAIL')
-            connection.login(server_email, server_pass)
-            connection.sendmail(from_addr=server_email,
-                                to_addrs=admin_email,
-                                msg="Subject: New Message From Personal Website\n\n"
-                                    f"Name: {form.name}\n"
-                                    f"Email: {form.email}\n"
-                                    f"Message: {form.message}\n")
+    # if form.validate_on_submit():
+    #     with smtplib.SMTP("smtp.gmail.com", 587, timeout=120) as connection:
+    #         connection.starttls()
+    #         server_email = os.getenv('EMAIL')
+    #         server_pass = os.getenv('PASSWORD')
+    #         admin_email = os.getenv('ADMIN_EMAIL')
+    #         connection.login(server_email, server_pass)
+    #         connection.sendmail(from_addr=server_email,
+    #                             to_addrs=admin_email,
+    #                             msg="Subject: New Message From Personal Website\n\n"
+    #                                 f"Name: {form.name}\n"
+    #                                 f"Email: {form.email}\n"
+    #                                 f"Message: {form.message}\n")
     return render_template("index.html", form=form)
 
 
