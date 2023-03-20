@@ -8,6 +8,7 @@ import smtplib
 
 load_dotenv()
 app = Flask(__name__)
+app.secret_key = os.getenv("SECRET_KEY")
 
 
 class ContactForm(FlaskForm):
