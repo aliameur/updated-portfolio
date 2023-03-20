@@ -34,7 +34,7 @@ def home():
                                     f"Name: {form.name}\n"
                                     f"Email: {form.email}\n"
                                     f"Message: {form.message}\n")
-    return render_template("index.html")
+    return render_template("index.html", form=form)
 
 
 if __name__ == '__main__':

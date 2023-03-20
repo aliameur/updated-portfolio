@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ali Ameur</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+      <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
     <script
       src="https://kit.fontawesome.com/9afceccd18.js"
       crossorigin="anonymous"
@@ -25,9 +26,9 @@
           </li>
           <li class="nav__link">
             <a
-              href=""
+              href="#projects"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
-              >Project</a
+              >Projects</a
             >
           </li>
           <li class="nav__link">
@@ -58,16 +59,16 @@
               the world.
             </p>
             <div class="about-me__links">
-              <a class="about-me__link" href="">
+              <a class="about-me__link" href="https://www.linkedin.com/in/aliameur/" target="_blank">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
-              <a class="about-me__link" href="">
+              <a class="about-me__link" href="https://github.com/aliameur" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a class="about-me__link" href="">
+              <a class="about-me__link" href="mailto:hello@aliameur.com" target="_blank">
                 <i class="fa-regular fa-envelope"></i>
               </a>
-              <a class="about-me__link" href="">
+              <a class="about-me__link" href="{{ url_for('static', filename='resume.pdf') }}" target="_blank">
                 <i class="fa-solid fa-file"></i>
               </a>
             </div>
@@ -76,7 +77,7 @@
             <img
               class="about-me__img"
               src="{{ url_for('static', filename='img/undraw_websites.svg') }}"
-              alt=""
+              alt="me"
             />
           </figure>
         </div>
@@ -200,10 +201,10 @@
                     fuga eos sunt consequatur. Ab eaque aspernatur sequi!
                   </p>
                   <div class="project__description--links">
-                    <a href="" class="project__description--link">
+                    <a href="https://github.com/aliameur/dapp_plant_imaging" class="project__description--link" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="" class="project__description--link">
+                    <a href="" class="project__description--link" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -230,10 +231,10 @@
                     fuga eos sunt consequatur. Ab eaque aspernatur sequi!
                   </p>
                   <div class="project__description--links">
-                    <a href="" class="project__description--link">
+                    <a href="https://github.com/aliameur/dapp_plant_imaging" class="project__description--link" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="" class="project__description--link">
+                    <a href="" class="project__description--link" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
@@ -260,25 +261,45 @@
                     fuga eos sunt consequatur. Ab eaque aspernatur sequi!
                   </p>
                   <div class="project__description--links">
-                    <a href="" class="project__description--link">
+                    <a href="https://github.com/aliameur/dapp_plant_imaging" class="project__description--link" target="_blank">
                       <i class="fa-brands fa-github"></i>
                     </a>
-                    <a href="" class="project__description--link">
+                    <a href="" class="project__description--link" target="_blank">
                       <i class="fa-solid fa-link"></i>
                     </a>
                   </div>
                 </div>
               </div>
             </li>
+            
           </ul>
         </div>
       </div>
     </section>
+    <!-- <section id="contact">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Get in <span class="text--purple">touch</span>
+          </h1>
+          <form method="POST" action="/" class="contact-form">
+            {{ form.csrf_token() }}
+            <label for="name" class="contact-form__label">Name</label>
+            <input name="name" type="text" class="contact-form__input">
+            <label for="name" class="contact-form__label">Email</label>
+            <input name="email" type="text" class="contact-form__input">
+            <label for="name" class="contact-form__label">Message</label>
+            <textarea name="message" type="text" class="contact-form__input" cols="30" rows="10"></textarea>
+            <button type="submit" class="contact-form__submit-button">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section> -->
     <footer>
       <div class="row footer__row">
         <a class="footer__anchor" href="#">
           <figure class="footer__logo">
-            <img src="{{ url_for('static', filename='img/logo.webp') }}" class="footer__logo--img" alt="" />
+            <img src="{{ url_for('static', filename='img/logo white.png') }}" class="footer__logo--img" alt="" />
           </figure>
           <span class="footer__logo--popper">
             Top
@@ -287,25 +308,25 @@
         </a>
         <div class="footer__social--list">
           <a
-            href=""
+            href="https://github.com/aliameur"
             target="_blank"
             class="footer__social--link link__hover-effect link__hover-effect--white"
             >GitHub</a
           >
           <a
-            href=""
+            href="https://www.linkedin.com/in/aliameur/"
             target="_blank"
             class="footer__social--link link__hover-effect link__hover-effect--white"
             >LinkedIn</a
           >
           <a
-            href=""
+            href="mailto:hello@aliameur.com"
             target="_blank"
             class="footer__social--link link__hover-effect link__hover-effect--white"
             >Email</a
           >
           <a
-            href="./assets/resume.pdf"
+            href="{{ url_for('static', filename='resume.pdf') }}"
             target="_blank"
             class="footer__social--link link__hover-effect link__hover-effect--white"
             >Resume</a
