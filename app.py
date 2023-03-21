@@ -4,11 +4,26 @@ import os
 from flask_wtf import FlaskForm
 from wtforms import StringField, TextAreaField
 from wtforms.validators import DataRequired, Email
+from flask_talisman import Talisman
 import smtplib
 
 load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY")
+csp = {
+    'default-src': [
+        '\'self\'',
+        '\'unsafe-inline\'',
+        'fonts.googleapis.com',
+        'kit.fontawesome.com',
+        'ka-f.fontawesome.com',
+        'www.w3.org',
+        'upload.wikimedia.org',
+        'www.svgrepo.com',
+        'fonts.gstatic.com'
+    ]
+}
+talisman = Talisman(app, content_security_policy=csp)
 
 
 class ContactForm(FlaskForm):
